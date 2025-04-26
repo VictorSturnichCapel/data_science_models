@@ -14,7 +14,6 @@ def fillMissingData(X, inicioColuna, fimColuna):
     X[:,inicioColuna:fimColuna + 1] = imputer.fit_transform(X[:,inicioColuna:fimColuna + 1])
     return X
 
-
 def computeCategorization(X, i):
     
     #one hot encoding

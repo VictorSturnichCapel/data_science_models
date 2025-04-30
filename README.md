@@ -11,7 +11,7 @@ Este repositório contém três implementações de algoritmos de regressão uti
 ## Arquivos
 
 - **`regressao_linear.py`**  
-  Regressão linear simples para modelar a relação entre uma variável independente e uma variável dependente.
+  Regressão linear simples para modelar a relação entre uma variável independente e uma variável dependente!
 
 - **`regressao_linear_multipla.py`**  
   Regressão linear múltipla usando várias variáveis independentes para prever um único valor.

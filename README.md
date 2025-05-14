@@ -4,7 +4,6 @@
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)  
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-
 Este repositório contém três implementações de algoritmos de regressão utilizando Python e bibliotecas populares como `scikit-learn` e `matplotlib`.
 
 ---

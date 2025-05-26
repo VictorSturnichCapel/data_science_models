@@ -15,7 +15,6 @@ def computePolynomialLinearRegressionModel(X, y, d):
     polyLinearRegression = LinearRegression()
     polyLinearRegression.fit(XPolynomial, y)
 
-
     return XPolynomial, polyLinearRegression
 
 def showPlot(XPoints, yPoints, XLine, yLine):

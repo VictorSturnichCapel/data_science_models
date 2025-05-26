@@ -56,6 +56,5 @@ def runPolynomialLinearRegressionExample(filename):
     
     showPlot(X, y, X, polyLinearRegressor.predict(XPoly))
 
-
 if __name__ == "__main__":
     runPolynomialLinearRegressionExample("src/salary.csv")

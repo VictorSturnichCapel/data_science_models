@@ -51,6 +51,7 @@ def computeMultiLinearRegression(XTrain, yTrain, XTest, yTest):
     import matplotlib.pyplot as plt
     plt.figure(figsize=(6,6))
     plt.scatter(yTest, yPred, alpha=0.7)
+    
     # Linha identidade para referência
     lims = [min(yTest.min(), yPred.min()), max(yTest.max(), yPred.max())]
     plt.plot(lims, lims, 'r--', linewidth=1)

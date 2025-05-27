@@ -38,9 +38,8 @@ def splitTrainTestSets(X, y, testSize):
     XTrain, XTest, yTrain, yTest = train_test_split(X, y, test_size = testSize)
     return XTrain, XTest, yTrain, yTest
 
-def computeScaling(train, test):
+def computeScaling(X):
     from sklearn.preprocessing import StandardScaler
-    scaleX = StandardScaler()
-    train = scaleX.fit_transform(train)
-    test = scaleX.fit_transform(test)
-    return train, test
+    scale = StandardScaler()
+    X = scale.fit_transform(X)
+    return X, scale

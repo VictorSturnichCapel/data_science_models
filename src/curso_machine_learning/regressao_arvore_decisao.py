@@ -19,7 +19,7 @@ def showPlot(XPoints, yPoints, XLine, yLine):
 
     plt.scatter(XPoints, yPoints, color = 'red') #plot real y points
     plt.plot(XLine, yLine, color = 'blue') #plot predicted points in line
-    plt.title("Comparando pontos reais com a reta produzida pela regressão polinomial")
+    plt.title("Comparando pontos reais com a reta produzida pela regressão árvore de decisão")
     plt.xlabel("Experiência em anos")
     plt.ylabel("Salário")
     plt.show()

@@ -13,7 +13,6 @@ def loadDataset(filename):
 
     return X, y
 
-
 def fillMissingDataX(X):
     from sklearn.impute import SimpleImputer
     # Criar o imputer, que irá transformar os dados faltantes em mediana

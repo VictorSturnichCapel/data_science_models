@@ -47,5 +47,8 @@ def runRandomForestRegressionModelExample(filename):
 
     showPlot(X, y, XGrid, rfModel.predict(XGrid))
 
+    from sklearn.metrics import r2_score
+    return r2_score(y, rfModel.predict(X))
+
 if __name__ == "__main__":
-    runRandomForestRegressionModelExample("src/salary.csv")
+    print(runRandomForestRegressionModelExample("src/salary.csv"))

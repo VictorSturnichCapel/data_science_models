@@ -35,6 +35,8 @@ def computeMultiLinearRegression(XTrain, yTrain, XTest, yTest):
     # Ajustar o modelo aos dados de treino
     regressor.fit(XTrain, yTrain)
 
+    return regressor
+
     # Prever os resultados para o conjunto de teste
     yPred = regressor.predict(XTest)
 
@@ -51,7 +53,6 @@ def computeMultiLinearRegression(XTrain, yTrain, XTest, yTest):
     import matplotlib.pyplot as plt
     plt.figure(figsize=(6,6))
     plt.scatter(yTest, yPred, alpha=0.7)
-    
     # Linha identidade para referência
     lims = [min(yTest.min(), yPred.min()), max(yTest.max(), yPred.max())]
     plt.plot(lims, lims, 'r--', linewidth=1)
@@ -67,7 +68,11 @@ def runMultipleLinearRegression(filename):
     X = pre.computeCategorization(X, 3)
     XTrain, XTest, yTrain, yTest = pre.splitTrainTestSets(X, y, 0.2)
     XTrain, XTest = computeAutomaticBackwardElimination(XTrain, yTrain, XTest, 0.05)
-    computeMultiLinearRegression(XTrain, yTrain, XTest, yTest)
+    regressor = computeMultiLinearRegression(XTrain, yTrain, XTest, yTest)
+
+    from sklearn.metrics import r2_score
+    return r2_score(yTest, regressor.predict(XTest))
+
 
 if __name__ == "__main__":
-    runMultipleLinearRegression("src/insurance.csv")
+    print(runMultipleLinearRegression("src/insurance.csv"))

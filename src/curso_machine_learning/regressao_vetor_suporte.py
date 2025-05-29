@@ -64,6 +64,8 @@ def runSupportVectorRegressionExample(filename):
     
     showPlot(scaleX.inverse_transform(X), scaleY.inverse_transform(y), scaleX.inverse_transform(X), scaleY.inverse_transform(np.reshape((svrModel.predict(X)),(-1,1))))
 
+    from sklearn.metrics import r2_score
+    return r2_score(y, svrModel.predict(X))
 
 if __name__ == "__main__":
-    runSupportVectorRegressionExample("src/salary.csv")
+    print(runSupportVectorRegressionExample("src/salary.csv"))

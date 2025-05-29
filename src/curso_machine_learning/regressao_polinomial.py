@@ -38,7 +38,7 @@ def showPlot(XPoints, yPoints, XLine, yLine):
     plt.show()
 
 
-def runPolynomialLinearRegressionExample(filename):
+def runPolynomialLinearRegressionExample(filename, degree):
     start_time = time.time()
     X, y = pre.loadDataset(filename)
     elapsed_time = time.time() - start_time
@@ -50,11 +50,14 @@ def runPolynomialLinearRegressionExample(filename):
     print("Fill Missing Data: %.2f" % elapsed_time, "segundos.")
 
     start_time = time.time()
-    XPoly, polyLinearRegressor = computePolynomialLinearRegressionModel(X, y, 4)
+    XPoly, polyLinearRegressor = computePolynomialLinearRegressionModel(X, y, degree)
     elapsed_time = time.time() - start_time
     print("Compute Polynomial Linear Regression: %.2f" % elapsed_time, "segundos.")
     
     showPlot(X, y, X, polyLinearRegressor.predict(XPoly))
 
+    from sklearn.metrics import r2_score
+    return r2_score(y, polyLinearRegressor.predict(XPoly))
+
 if __name__ == "__main__":
-    runPolynomialLinearRegressionExample("src/salary.csv")
+    print(runPolynomialLinearRegressionExample("src/salary.csv"))

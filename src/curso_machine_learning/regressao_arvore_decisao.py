@@ -51,5 +51,8 @@ def runDecisionTreeRegressionModelExample(filename):
     export_graphviz(dtModel, out_file='tree.dot', feature_names=['Experiência'])
     # visualizar árvore em: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFBuQnNMekpBbnBhajJZWUZvQ0RITU9ocU03d3xBQ3Jtc0tscFBKNUEtWEprTnRCT0wwYTJ0eU1hN21KUTN4VGpLdS00TXl1c29xUjB6SWU3VEN0LUNfWU1KdGlUQ1k0MVNwbEdqdE56azYyN3YweHpBbEFsb0dITV94SU5WR1VZWldxR202VFlaR1FVcXhqMnFZTQ&q=https%3A%2F%2Fdreampuf.github.io%2FGraphvizOnline%2F&v=JwJcb-raZzo
 
+    from sklearn.metrics import r2_score
+    return r2_score(y, dtModel.predict(X))
+
 if __name__ == "__main__":
-    runDecisionTreeRegressionModelExample("src/salary.csv")
+    print(runDecisionTreeRegressionModelExample("src/salary.csv"))

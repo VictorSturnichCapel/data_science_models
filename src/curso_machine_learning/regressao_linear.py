@@ -13,6 +13,7 @@ def loadDataset(filename):
 
     return X, y
 
+
 def fillMissingDataX(X):
     from sklearn.impute import SimpleImputer
     # Criar o imputer, que irá transformar os dados faltantes em mediana
@@ -77,6 +78,8 @@ def computeLinearRegressionModel(XTrain, yTrain, XTest, yTest):
     # Treinar o modelo
     regressor.fit(XTrain, yTrain)
 
+    return regressor
+
     # Prever os resultados
     yPred = regressor.predict(XTest)
 
@@ -124,7 +127,10 @@ def run_LinearRegression(filename):
     XTrain, XTest, yTrain, yTest = splitTrainTestSets(X, y, 0.2)
     # Para regressão linear é bom manter as escalas do jeito que veio
     #XTrain, XTest = computeScaling(XTrain, XTest)
-    computeLinearRegressionModel(XTrain, yTrain, XTest, yTest)
+    regressor = computeLinearRegressionModel(XTrain, yTrain, XTest, yTest)
+
+    from sklearn.metrics import r2_score
+    return r2_score(yTest, regressor.predict(XTest))
 
 if __name__ == "__main__":
-    run_LinearRegression('src/movie_data.csv')
+    print(run_LinearRegression('src/movie_data.csv'))

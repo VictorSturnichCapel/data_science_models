@@ -100,7 +100,6 @@ Cada arquivo segue o seguinte fluxo:
 5. **Visualização** dos resultados (quando aplicável)
 
 ---
-
 ## Licença
 
 Distribuído sob a licença MIT.  

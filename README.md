@@ -5,7 +5,6 @@
 
 Este repositório contém três implementações de algoritmos de regressão utilizando Python e bibliotecas populares como `scikit-learn` e `matplotlib`.
 
-
 ---
 
 ## Arquivos

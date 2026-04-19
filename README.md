@@ -104,5 +104,3 @@ Cada arquivo segue o seguinte fluxo:
 
 Distribuído sob a licença MIT.  
 Sinta-se livre para usar, modificar e compartilhar!
-
-

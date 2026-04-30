@@ -94,6 +94,7 @@ Aplica transformação polinomial e ajusta o modelo:
 Cada arquivo segue o seguinte fluxo:
 
 1. **Importação** das bibliotecas necessárias
+
 2. **Criação** ou **carregamento** de dados de entrada
 3. **Treinamento** do modelo
 4. **Avaliação** do modelo
@@ -104,3 +105,5 @@ Cada arquivo segue o seguinte fluxo:
 
 Distribuído sob a licença MIT.  
 Sinta-se livre para usar, modificar e compartilhar!
+
+
